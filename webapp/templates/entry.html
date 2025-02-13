@@ -1,1 +1,16 @@
+{% extends 'base.html' %}
 
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/reverse'>
+<table>
+<p>Use this form to submit a string to reverse:</p>
+<tr><td>Input String:</td><td><input name='input_string' type='TEXT' width='60'></td></tr>
+</table>
+<p>When you are ready, click this button:</p>
+<p><input value='Do it!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
