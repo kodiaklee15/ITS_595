@@ -1,1 +1,15 @@
+{% extends 'base.html' %}
 
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>You submitted the following data:</p>
+<table>
+<tr><td>Input String:</td><td>{{ the_input_string }}</td></tr>
+</table>
+
+<p>The following reversed string is returned:</p>
+<h3>{{ the_results }}</h3>
+
+{% endblock %}
