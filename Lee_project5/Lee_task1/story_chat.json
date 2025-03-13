@@ -1,6 +1,6 @@
 {
     "temperature": 0.8,
-    "max_tokens": 25,
+    "max_tokens": 200,
     "messages": [
         { "role": "system", "content": "You are a creative writer who fantasizes unique one paragraph stories." },
         { "role": "user", "content": "{{characters}}: {{setting}}: {{conflict}}" }
