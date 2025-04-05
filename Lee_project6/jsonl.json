@@ -1,0 +1,16 @@
+{
+    "temperature": 0.2,
+    "max_tokens": 800,
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are generating chat-style training data in JSONL format. Each line should be a JSON object with a 'messages' key, and include a user message and assistant response. Make sure each training example is a complete and valid JSON object on a single line."
+      },
+      {
+        "role": "user",
+        "content": "Here is some information about sign languages: {{info}}. Return {{n}} training examples in JSONL format using the 'messages' structure."
+      }
+    ]
+  }
+  
+  
