@@ -21,6 +21,7 @@ for f in os.listdir(cinema_path):
 
     response = template.completion({'info': text, 'n': '20'})
 
+    # cleans up the response to ensure valid JSON lines
     for line in response.choices[0].message.content.strip().split("\n"):
         line = line.strip()
         if not line:
