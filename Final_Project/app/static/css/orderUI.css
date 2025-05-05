@@ -1,0 +1,212 @@
+/* AI Chatbox Styling */
+#chatbox-container {
+  position: fixed;
+  right: 20px; /* Place the chatbox on the right side */
+  bottom: 20px; /* Place it a bit from the bottom */
+  margin-right: 20px; /* Add some margin to the left */
+  width: 300px; /* Adjust the width as needed */
+  height: 440px; /* Set a height for the chatbox */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  border: 2px solid #56ab2f; /* Green border */
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Make sure it's on top of other elements */
+}
+
+/* Chatbox Header */
+#chatbox h2 {
+  font-size: 18px;
+  margin: 10px;
+  color: #333;
+  text-align: center;
+}
+
+/* Chatbox Messages */
+#chatbox-messages {
+  height: 270px; /* Adjust the height for the message area */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+/* Input Styling */
+#user-input {
+  width: 90%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Send Button Styling */
+#send-button {
+  width: 98%;
+  padding: 10px;
+  background-color: #56ab2f; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#send-button:hover {
+  background-color: #a8e063;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #chatbox-container {
+      width: 250px; /* Smaller width for mobile */
+      height: 350px; /* Adjust height */
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Gradient background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+/* Main Form Container */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto; /* Center the form */
+  margin-left: 50px;
+  border: 2px solid #56ab2f; /* Green border for the container */
+}
+
+/* Header Styling */
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Form Labels */
+label {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Dropdown Menu (Size) */
+select {
+  width: fit-content;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  border: 2px solid #56ab2f; /* Green border */
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Toppings Section */
+.toppings-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.toppings-section label {
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toppings-section input[type="checkbox"] {
+  transform: scale(1.3);
+}
+
+.toppings-section label:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Sauce Section */
+.sauce-section {
+  margin-bottom: 20px;
+}
+
+.sauce-section input {
+  margin-right: 10px;
+}
+
+.sauce-section label {
+  font-size: 16px;
+  color: #000000;
+}
+
+/* Quantity Input */
+input[type="number"] {
+  width: 50px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  border: 2px solid #56ab2f; /* Green border */
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #56ab2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a8e063;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toppings-section label {
+      width: 100%; /* Stack labels on mobile */
+  }
+
+  select, input[type="number"] {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 16px;
+  }
+}

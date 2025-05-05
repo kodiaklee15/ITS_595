@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.env
+.env
+
+# MacOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Node/npm (just in case)
+node_modules/
+
+# Flask
+instance/
+*.log
+
+# Environment files
+venv/
+.env

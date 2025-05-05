@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order - Step 1</title>
+
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexUI.css') }}">
+</head>
+<body class="bg-light">
+    <div class="container">
+        <h1 class="text-center">Enter Your Name to Begin</h1>
+
+        <form method="POST" class="text-center">
+            <input type="text" name="name" class="form-control mb-3" placeholder="Enter name" required>
+            <button type="submit" class="btn btn-primary btn-lg">Next</button>
+        </form>
+    </div>
+</body>
+</html>

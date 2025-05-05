@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confirmationUI.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Review and Confirm Your Pizza Order</h1>
+            
+        </header>
+
+        <div class="order-summary">
+            <h2>Order Summary:</h2>
+            <ul>
+                <li>Size: {{ size }}</li>
+                <li>Toppings: {{ toppings | join(', ') }}</li>
+                <li>Sauce: {{ sauce }}</li>
+                <li>Quantity: {{ quantity }}</li>
+            </ul>
+
+            <div class="button-container">
+                <form method="POST" action="/order_confirmed">
+                    <button type="submit" class="btn btn-success">Confirm Order</button>
+                </form>
+            
+                <a href="{{ url_for('order') }}" class="btn btn-outline-secondary">Edit Order</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

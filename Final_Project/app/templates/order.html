@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Order - Step 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/orderUI.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Welcome, {{ user_name }}! Select Your Pizza</h1>
+
+        <form method="POST">
+            <!-- Pizza Size Dropdown -->
+            <label for="size">Size:</label>
+            <select name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <!-- Toppings Checkboxes -->
+            <label for="toppings">Toppings (select multiple):</label>
+            <div class="toppings-section">
+                <label><input type="checkbox" name="toppings" value="no cheese"> No Cheese</label>
+                <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+                <label><input type="checkbox" name="toppings" value="mushrooms"> Mushrooms</label>
+                <label><input type="checkbox" name="toppings" value="sausage"> Sausage</label>
+                <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
+                <label><input type="checkbox" name="toppings" value="green_peppers"> Green Peppers</label>
+                <label><input type="checkbox" name="toppings" value="olives"> Olives</label>
+                <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label>
+                <label><input type="checkbox" name="toppings" value="bacon"> Bacon</label>
+            </div>
+
+            <!-- Sauce Selection -->
+            <label for="sauce">Sauce:</label>
+            <div class="sauce-section">
+                <input type="radio" name="sauce" value="tomato" checked> Tomato<br>
+                <input type="radio" name="sauce" value="bbq"> BBQ<br>
+                <input type="radio" name="sauce" value="white"> White<br>
+                <input type="radio" name="sauce" value="pesto"> Pesto<br>
+            </div>
+
+            <!-- Quantity Input -->
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" min="1" value="1">
+
+            <!-- Submit Button -->
+            <button type="submit">Next</button>
+        </form>
+    </div>
+
+    <!-- AI Chatbox (already set up) -->
+    <div id="chatbox-container">
+        <div id="chatbox">
+            <h2>Order with AI</h2>
+            <div id="chatbox-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
