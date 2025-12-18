@@ -45,3 +45,4 @@ Contains a series of examples that demonstrate how the fine-tuned GPT model shou
 ## How to Run the Project
 
 1. **Clone the repository**:
+2. **Run run.py to initiate the webapp**:
